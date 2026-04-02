@@ -52,6 +52,9 @@ resource "aws_route_table" "my-route-table" {
   }
 }
 
+# in route table a route has 2 things destination and target. destination is where we want to go and target is how we want to reach there. 
+#In this case we want to reach internet and to reach internet we need to use internet gateway. So destination is 0.0.0/0 and target is internet gateway.
+
 # create route to internet gateway
 resource "aws_route" "my-route" {
   route_table_id = aws_route_table.my-route-table.id
