@@ -22,8 +22,6 @@ resource "aws_vpc" "my-vpc" {
   
 }
 
-
-
 ### PUBLIC SUBNET ###
 # create public subnet
 resource "aws_subnet" "my-public-subnet" {
@@ -67,8 +65,6 @@ resource "aws_route_table_association" "my-route-table-association" {
   subnet_id = aws_subnet.my-public-subnet.id
   route_table_id = aws_route_table.my-route-table.id
 } 
-
-
 
 ## PRIVATE SUBNET ###
 # create private subnet
